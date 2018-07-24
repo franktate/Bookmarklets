@@ -1,0 +1,3 @@
+/* When executed, this will display all form values on the current page. Useful to view passwords and such */
+
+javascript: (function() { var s="", F=document.forms,j,f,i; for(j=0; j<F.length; ++j) { f = F[j]; for (i=0; i< f.length; ++i) { if(f[i].type) s += f[i].type + "__" + f[i].value + "\n"; } } if (s) alert("All form fields (type__value):\n\n" + s); else alert("No form fields on this page."); } )();
